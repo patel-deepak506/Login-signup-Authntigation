@@ -1,13 +1,5 @@
 pipeline {
-    agent {
-        docker { 
-            image 'node:14' // Node.js Docker image
-        }
-    }
-    environment {
-        DOCKER_IMAGE = 'your-docker-repo/nodejs-app' // Replace with your Docker repo
-        DOCKER_TAG = 'latest'
-    }
+    agent any
     stages {
         stage('Clone Repository') {
             steps {
